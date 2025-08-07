@@ -65,7 +65,7 @@ export default function FaqsSection() {
                             Asked Questions
                         </span>
                     </h2>
-                                    <p className="max-w-xl mx-auto text-muted-foreground text-base leading-relaxed">
+                    <p className="max-w-xl mx-auto text-muted-foreground text-base leading-relaxed">
                         Find answers to common questions about our platform.
                     </p>
                 </motion.div>
@@ -81,8 +81,8 @@ export default function FaqsSection() {
                                 transition={{ duration: 0.3, delay: i * 0.05 }}
                                 className="group"
                             >
-                                <AccordionItem 
-                                    value={`item-${i}`} 
+                                <AccordionItem
+                                    value={`item-${i}`}
                                     className="border border-border/40 rounded-xl bg-card/50 backdrop-blur-sm shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/20 group-data-[state=open]:border-primary/30 group-data-[state=open]:shadow-lg group-data-[state=open]:bg-primary/5"
                                 >
                                     <AccordionTrigger className="text-left font-medium hover:no-underline px-6 py-5 [&>svg]:hidden">
@@ -94,8 +94,8 @@ export default function FaqsSection() {
                                             </div>
                                             <div className="flex-1 min-w-0">
                                                 <div className="flex items-center justify-between w-full mb-2">
-                                                    <Badge 
-                                                        variant="outline" 
+                                                    <Badge
+                                                        variant="outline"
                                                         className="text-xs font-medium bg-muted/30 text-muted-foreground border-border/50"
                                                     >
                                                         {faq.category}
@@ -145,17 +145,17 @@ export default function FaqsSection() {
                                     </span>
                                 </h3>
                                 <p className="text-muted-foreground mb-6 text-lg">
-                                    Can't find what you're looking for? Our support team is here to help.
+                                    {"Can't find what you're looking for? Our support team is here to help."}
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                    <motion.button 
+                                    <motion.button
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.95 }}
                                         className="px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors duration-200 font-medium shadow-lg hover:shadow-xl"
                                     >
                                         Contact Support
                                     </motion.button>
-                                    <motion.button 
+                                    <motion.button
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.95 }}
                                         className="px-6 py-3 border border-border bg-background/80 backdrop-blur-sm text-foreground rounded-lg hover:bg-muted transition-colors duration-200 font-medium"

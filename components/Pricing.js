@@ -31,7 +31,7 @@ export default function Pricing() {
           </h2>
 
           <p className="max-w-2xl mx-auto text-muted-foreground text-lg leading-relaxed">
-            Choose the plan that's right for your business. All plans include a 14-day free trial.
+            {"Choose the plan that's right for your business. All plans include a 14-day free trial."}
           </p>
         </motion.div>
 

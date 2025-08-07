@@ -101,7 +101,7 @@ export default function Testimonials() {
             </span>
           </h2>
           <p className="max-w-[800px] text-muted text-white/70 md:text-lg">
-            Don't just take our word for it. See what our customers have to say about their experience.
+            {"Don't just take our word for it. See what our customers have to say about their experience."}
           </p>
         </motion.div>
 
@@ -141,7 +141,7 @@ export default function Testimonials() {
                   </div>
 
                   <p className="text-lg mb-6 flex-grow relative z-10 group-hover:text-white/90 transition-colors">
-                    "{testimonial.quote}"
+                    {`"${testimonial.quote}"`}
                   </p>
 
                   <div className="flex items-center gap-4 mt-auto pt-4 border-t border-border/40">
