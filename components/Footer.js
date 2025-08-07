@@ -122,7 +122,7 @@ export default function Footer() {
                 <div className="size-10 rounded-xl bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-primary-foreground text-lg font-bold shadow-lg">
                   S
                 </div>
-                <span className="text-2xl font-bold">SaaSify</span>
+                <span className="text-2xl font-bold">SaaSly</span>
               </div>
 
               <p className="text-muted-foreground leading-relaxed max-w-md">
@@ -224,7 +224,7 @@ export default function Footer() {
           >
             <div className="flex flex-col sm:flex-row items-center gap-4 text-sm text-muted-foreground">
               <p className="flex items-center gap-2">
-                &copy; {currentYear} SaaSify. Made in
+                &copy; {currentYear} SaaSly. Made in
                 <Heart className="size-4 text-red-500 fill-red-500" />
                 India.
               </p>

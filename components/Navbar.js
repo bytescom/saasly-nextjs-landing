@@ -103,7 +103,7 @@ export default function Navbar() {
             <div className="size-8 rounded-lg bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-primary-foreground text-sm font-bold shadow-sm">
               S
             </div>
-            <span className="text-lg font-semibold">SaaSify</span>
+            <span className="text-lg font-semibold">SaaSly</span>
           </Link>
 
           {/* Desktop Navigation */}

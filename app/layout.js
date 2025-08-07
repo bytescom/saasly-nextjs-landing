@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "SaasNud - Streamline Your Workflow",
+  title: "SaaSly - Streamline Your Workflow",
   description: "Boost productivity, reduce costs, and scale your business with our all-in-one SaaS platform.",
 }
 

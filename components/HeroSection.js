@@ -66,7 +66,7 @@ export default function HeroSection() {
                         </span>
                         <br />
                         <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 dark:from-blue-400 dark:via-purple-400 dark:to-blue-600">
-                            with SaaSify
+                            with SaaSly
                         </span>
                     </motion.h1>
 
