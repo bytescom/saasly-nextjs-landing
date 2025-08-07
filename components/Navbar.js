@@ -15,7 +15,7 @@ export default function Navbar() {
 
   useEffect(() => {
     setMounted(true)
-    
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10)
     }
@@ -28,7 +28,7 @@ export default function Navbar() {
 
     window.addEventListener("scroll", handleScroll)
     window.addEventListener("resize", handleResize)
-    
+
     // Prevent body scroll when mobile menu is open
     if (mobileMenuOpen) {
       document.body.style.overflow = 'hidden'
@@ -56,13 +56,13 @@ export default function Navbar() {
 
   const handleMobileNavClick = (href) => {
     setMobileMenuOpen(false)
-    
+
     // Smooth scroll to section
     if (href.startsWith('#')) {
       setTimeout(() => {
         const element = document.querySelector(href)
         if (element) {
-          element.scrollIntoView({ 
+          element.scrollIntoView({
             behavior: 'smooth',
             block: 'start'
           })
@@ -88,16 +88,15 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${
-          isScrolled 
-            ? "bg-background/60 backdrop-blur-lg shadow-sm border-b border-border/50" 
-            : "bg-transparent"
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ${isScrolled
+          ? "bg-background/60 backdrop-blur-lg shadow-sm border-b border-border/50"
+          : "bg-transparent"
+          }`}
       >
         <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6 max-w-7xl">
           {/* Logo */}
-          <Link 
-            href="/" 
+          <Link
+            href="/"
             className="flex items-center gap-2 font-bold hover:opacity-80 transition-opacity z-50"
           >
             <div className="size-8 rounded-lg bg-gradient-to-br from-primary to-primary/70 flex items-center justify-center text-primary-foreground text-sm font-bold shadow-sm">
@@ -123,10 +122,10 @@ export default function Navbar() {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center gap-4">
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              onClick={toggleTheme} 
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleTheme}
               className="rounded-full hover:bg-muted/80 transition-colors"
               aria-label="Toggle theme"
             >
@@ -140,14 +139,14 @@ export default function Navbar() {
                 </>
               )}
             </Button>
-            
+
             <Link
               href="/login"
               className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground px-3 py-2 rounded-md hover:bg-muted/50"
             >
               Log in
             </Link>
-            
+
             <Button className="rounded-full shadow-sm hover:shadow-md transition-all duration-200" asChild>
               <Link href="/signup">
                 Get Started
@@ -158,10 +157,10 @@ export default function Navbar() {
 
           {/* Mobile Actions */}
           <div className="flex items-center gap-2 md:hidden">
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              onClick={toggleTheme} 
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleTheme}
               className="rounded-full hover:bg-muted/80 transition-colors"
               aria-label="Toggle theme"
             >
@@ -175,10 +174,10 @@ export default function Navbar() {
                 </>
               )}
             </Button>
-            
-            <Button 
-              variant="ghost" 
-              size="icon" 
+
+            <Button
+              variant="ghost"
+              size="icon"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="rounded-full hover:bg-muted/80 transition-colors z-50 relative"
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
@@ -224,14 +223,21 @@ export default function Navbar() {
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
-            transition={{ 
-              type: "spring", 
-              stiffness: 300, 
-              damping: 30 
+            transition={{
+              type: "spring",
+              stiffness: 300,
+              damping: 30
             }}
             className="fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-background/98 backdrop-blur-xl border-l border-border/50 shadow-2xl z-50 md:hidden"
           >
-            <div className="flex flex-col h-full pt-20 pb-6 px-6">
+            <div className="flex flex-col h-full pb-6 px-6">
+              <div className="w-full py-2 flex justify-end">
+                <X
+                  className="h-6 w-6 cursor-pointer"
+                  onClick={() => setMobileMenuOpen(false)}
+                />
+              </div>
+
               {/* Navigation Links */}
               <nav className="flex-1">
                 <div className="space-y-1">
@@ -240,7 +246,7 @@ export default function Navbar() {
                       key={item.name}
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ 
+                      transition={{
                         delay: index * 0.1 + 0.1,
                         duration: 0.3
                       }}
@@ -256,7 +262,7 @@ export default function Navbar() {
                   ))}
                 </div>
               </nav>
-              
+
               {/* Action Buttons */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -271,9 +277,9 @@ export default function Navbar() {
                 >
                   Log in
                 </Link>
-                
-                <Button 
-                  className="w-full rounded-lg h-12 shadow-sm hover:shadow-md transition-all duration-200" 
+
+                <Button
+                  className="w-full rounded-lg h-12 shadow-sm hover:shadow-md transition-all duration-200"
                   asChild
                 >
                   <Link href="/signup" onClick={() => handleMobileNavClick("/signup")}>
