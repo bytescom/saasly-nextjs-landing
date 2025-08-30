@@ -75,7 +75,7 @@ const item = {
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="w-full py-20 md:py-32 bg-black relative overflow-hidden text-white">
+    <section id="testimonials" className="w-full py-20 md:py-32 bg-background relative overflow-hidden">
       {/* Background Blobs */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-full blur-3xl" />
@@ -94,13 +94,13 @@ export default function Testimonials() {
           <Badge className="rounded-full px-4 py-1.5 text-sm font-medium" variant="secondary">
             💬 Testimonials
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">
             Loved by{" "}
             <span className="bg-gradient-to-r from-primary via-purple-500 to-pink-500 bg-clip-text text-transparent">
               Teams Worldwide
             </span>
           </h2>
-          <p className="max-w-[800px] text-muted text-white/70 md:text-lg">
+          <p className="max-w-[800px] text-muted-foreground md:text-lg">
             {"Don't just take our word for it. See what our customers have to say about their experience."}
           </p>
         </motion.div>
@@ -119,10 +119,10 @@ export default function Testimonials() {
               variants={item}
               className="group"
             >
-              <Card className="h-full overflow-hidden border-border/40 bg-gradient-to-b from-zinc-900 to-zinc-800 backdrop-blur transition-all hover:shadow-md hover:border-border group-hover:scale-[1.02] relative">
+              <Card className="h-full overflow-hidden border-border/40 bg-card/50 backdrop-blur transition-all hover:shadow-md hover:border-border group-hover:scale-[1.02] relative">
                 <CardContent className="p-6 flex flex-col h-full">
                   <div className="absolute top-4 right-4 opacity-20 group-hover:opacity-40 transition-opacity">
-                    <Quote className="h-8 w-8 text-white/30" />
+                    <Quote className="h-8 w-8 text-muted-foreground" />
                   </div>
 
                   <div className="flex mb-4">
@@ -140,7 +140,7 @@ export default function Testimonials() {
                       ))}
                   </div>
 
-                  <p className="text-lg mb-6 flex-grow relative z-10 group-hover:text-white/90 transition-colors">
+                  <p className="text-lg mb-6 flex-grow relative z-10 text-foreground group-hover:text-primary transition-colors">
                     {`"${testimonial.quote}"`}
                   </p>
 
@@ -149,10 +149,10 @@ export default function Testimonials() {
                       {testimonial.author.charAt(0)}
                     </div>
                     <div>
-                      <p className="font-medium group-hover:text-primary transition-colors">
+                      <p className="font-medium text-foreground group-hover:text-primary transition-colors">
                         {testimonial.author}
                       </p>
-                      <p className="text-sm text-white/50">
+                      <p className="text-sm text-muted-foreground">
                         {testimonial.role}
                       </p>
                     </div>

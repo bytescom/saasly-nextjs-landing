@@ -224,9 +224,17 @@ export default function Footer() {
           >
             <div className="flex flex-col sm:flex-row items-center gap-4 text-sm text-muted-foreground">
               <p className="flex items-center gap-2">
-                &copy; {currentYear} SaaSly. Made in
+                &copy; {currentYear} SaaSly. Made by
                 <Heart className="size-4 text-red-500 fill-red-500" />
-                India.
+                <Link 
+                  href="https://github.com/bytescom" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-primary hover:text-primary/80 transition-colors hover:underline"
+                >
+                  Bytescom
+                </Link>
+                .
               </p>
             </div>
 

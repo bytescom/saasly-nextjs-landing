@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react"
 import { useScroll } from "framer-motion"
-import { useTheme } from "next-themes"
 import Navbar from "@/components/Navbar"
 import HeroSection from "@/components/HeroSection"
 import FeaturesSection from "@/components/FeatureSection"
@@ -16,7 +15,6 @@ import TrustLogos from "@/components/TrustLogos"
 
 export default function LandingPage() {
   const [isScrolled, setIsScrolled] = useState(false)
-  const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
   const [scrollDirection, setScrollDirection] = useState(null)
   const { scrollY } = useScroll()
@@ -51,10 +49,6 @@ export default function LandingPage() {
     const unsubscribe = scrollY.on("change", updateScrollDirection)
     return () => unsubscribe()
   }, [scrollY])
-
-  const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark")
-  }
 
   return (
     <div className="flex min-h-[100dvh] flex-col">

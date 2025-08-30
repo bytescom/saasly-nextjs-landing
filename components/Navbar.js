@@ -10,7 +10,7 @@ import { useTheme } from "next-themes"
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const { theme, setTheme } = useTheme()
+  const { theme, setTheme, resolvedTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
@@ -44,7 +44,9 @@ export default function Navbar() {
   }, [mobileMenuOpen])
 
   const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark")
+    if (mounted) {
+      setTheme(resolvedTheme === "dark" ? "light" : "dark")
+    }
   }
 
   const navItems = [
@@ -129,14 +131,14 @@ export default function Navbar() {
               className="rounded-full hover:bg-muted/80 transition-colors"
               aria-label="Toggle theme"
             >
-              {mounted && (
-                <>
-                  {theme === "dark" ? (
-                    <Sun className="size-4 transition-transform duration-300" />
-                  ) : (
-                    <Moon className="size-4 transition-transform duration-300" />
-                  )}
-                </>
+              {mounted ? (
+                resolvedTheme === "dark" ? (
+                  <Sun className="size-4 transition-transform duration-300" />
+                ) : (
+                  <Moon className="size-4 transition-transform duration-300" />
+                )
+              ) : (
+                <Moon className="size-4 transition-transform duration-300" />
               )}
             </Button>
 
@@ -164,14 +166,14 @@ export default function Navbar() {
               className="rounded-full hover:bg-muted/80 transition-colors"
               aria-label="Toggle theme"
             >
-              {mounted && (
-                <>
-                  {theme === "dark" ? (
-                    <Sun className="size-4 transition-transform duration-300" />
-                  ) : (
-                    <Moon className="size-4 transition-transform duration-300" />
-                  )}
-                </>
+              {mounted ? (
+                resolvedTheme === "dark" ? (
+                  <Sun className="size-4 transition-transform duration-300" />
+                ) : (
+                  <Moon className="size-4 transition-transform duration-300" />
+                )
+              ) : (
+                <Moon className="size-4 transition-transform duration-300" />
               )}
             </Button>
 
