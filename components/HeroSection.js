@@ -90,7 +90,7 @@ export default function HeroSection() {
                     >
                         <Button
                             size="lg"
-                            className="rounded-full h-14 px-8 text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                            className="rounded-full h-13 md:h-14 px-4 md:px-8 text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
                         >
                             Start Free Trial
                             <ArrowRight className="ml-2 size-5" />
@@ -98,7 +98,7 @@ export default function HeroSection() {
                         <Button
                             size="lg"
                             variant="outline"
-                            className="rounded-full h-14 px-8 text-base font-semibold bg-transparent border-2 hover:bg-muted/50 transition-all duration-300"
+                            className="rounded-full h-13 md:h-14 px-4 md:px-8 text-base font-semibold bg-transparent border-2 hover:bg-muted/50 transition-all duration-300"
                         >
                             Book a Demo
                         </Button>
