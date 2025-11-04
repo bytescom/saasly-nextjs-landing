@@ -45,7 +45,8 @@ export default function Navbar() {
 
   const toggleTheme = () => {
     if (mounted) {
-      setTheme(resolvedTheme === "dark" ? "light" : "dark")
+      const newTheme = resolvedTheme === "dark" ? "light" : "dark"
+      setTheme(newTheme)
     }
   }
 
@@ -133,12 +134,12 @@ export default function Navbar() {
             >
               {mounted ? (
                 resolvedTheme === "dark" ? (
-                  <Sun className="size-4 transition-transform duration-300" />
+                  <Sun className="size-4 transition-transform duration-300 rotate-0 hover:rotate-90" />
                 ) : (
-                  <Moon className="size-4 transition-transform duration-300" />
+                  <Moon className="size-4 transition-transform duration-300 rotate-0 hover:rotate-90" />
                 )
               ) : (
-                <Moon className="size-4 transition-transform duration-300" />
+                <Moon className="size-4" />
               )}
             </Button>
 
@@ -168,12 +169,12 @@ export default function Navbar() {
             >
               {mounted ? (
                 resolvedTheme === "dark" ? (
-                  <Sun className="size-4 transition-transform duration-300" />
+                  <Sun className="size-4 transition-transform duration-300 rotate-0 hover:rotate-90" />
                 ) : (
-                  <Moon className="size-4 transition-transform duration-300" />
+                  <Moon className="size-4 transition-transform duration-300 rotate-0 hover:rotate-90" />
                 )
               ) : (
-                <Moon className="size-4 transition-transform duration-300" />
+                <Moon className="size-4" />
               )}
             </Button>
 
